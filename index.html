@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="#f6e6da">
+    <meta name="theme-color" content="#f5e6c4">
     <meta name="color-scheme" content="light">
     <title>Amritesh &amp; Shalini · Wedding Invitation</title>
     <meta name="description" content="Shri Arunabh Nandan &amp; Smt. Abha Kumari invite you to the wedding of their son Amritesh with Shalini.">
@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&family=Pinyon+Script&family=Yatra+One&display=swap"
         rel="stylesheet">
     <link rel="preload" href="judi-jodi-15s.mp3" as="audio" type="audio/mpeg">
     <style>
@@ -1267,6 +1267,421 @@
                 transform: none
             }
         }
+
+        /* ================= Mithila (Madhubani) theme =================
+           Handmade-paper ground, black double outlines, flat vermilion / turmeric / leaf / pink fills,
+           sawtooth border bands and dotted rims, as in Mithila wall and paper painting. */
+        :root {
+            --ivory: #fcf3dc;
+            --paper: #f5e6c4;
+            --cream: #f0dcaa;
+            --rose: #c8291f;
+            --berry: #a3201c;
+            --maroon: #7a1712;
+            --gold: #a85c08;
+            --gold-soft: #e1a94a;
+            --gold-pale: #f1d48c;
+            --ink: #2a1a12;
+            --muted: #6b4a33;
+            --line: #1d140f;
+            --vermilion: #c8291f;
+            --turmeric: #f0ae2e;
+            --leaf: #2f7d3a;
+            --pink: #d6457a;
+            --indigo: #23519a;
+            --script: 'Yatra One', 'Cormorant Garamond', serif;
+            --band: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='22'%3E%3Crect width='36' height='22' fill='%23fcf3dc'/%3E%3Cpath d='M0 19L9 4L18 19Z' fill='%23c8291f' stroke='%231d140f' stroke-width='1.3' stroke-linejoin='round'/%3E%3Cpath d='M18 19L27 4L36 19Z' fill='%23f0ae2e' stroke='%231d140f' stroke-width='1.3' stroke-linejoin='round'/%3E%3Ccircle cx='18' cy='6.5' r='1.7' fill='%231d140f'/%3E%3Ccircle cx='0' cy='6.5' r='1.7' fill='%231d140f'/%3E%3Ccircle cx='36' cy='6.5' r='1.7' fill='%231d140f'/%3E%3Cpath d='M0 1.2H36M0 20.8H36' stroke='%231d140f' stroke-width='2.4'/%3E%3C/svg%3E");
+        }
+
+        body::before {
+            background:
+                radial-gradient(ellipse 70% 50% at 10% 0%, #f8dfa8aa, transparent 70%),
+                radial-gradient(ellipse 60% 50% at 100% 100%, #efcf9a88, transparent 70%),
+                var(--paper)
+        }
+
+        body::after {
+            opacity: .55
+        }
+
+        /* Sawtooth band under the top bar and across the top of every section. */
+        .topbar {
+            background: #f5e6c4f0;
+            border-bottom: 0
+        }
+
+        .topbar::after,
+        main>.section::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 16px;
+            background: var(--band) repeat-x;
+            background-size: auto 16px;
+            pointer-events: none
+        }
+
+        .topbar::after {
+            top: 100%
+        }
+
+        main>.section::before {
+            top: 0;
+            height: 22px;
+            background-size: auto 22px
+        }
+
+        .monogram,
+        .seal {
+            font-family: var(--script)
+        }
+
+        .monogram span {
+            color: var(--leaf)
+        }
+
+        .topbar nav a {
+            font-weight: 500;
+            color: var(--ink)
+        }
+
+        .topbar nav a::after {
+            height: 3px;
+            background: var(--turmeric)
+        }
+
+        /* Divider: two lines like a painted border, a pair of fish facing a lotus. */
+        .divider::before,
+        .divider::after {
+            height: 6px;
+            background: none;
+            border-block: 2px solid var(--line)
+        }
+
+        .divider svg {
+            width: 150px;
+            height: 30px
+        }
+
+        .kicker,
+        .eyebrow {
+            font-weight: 500
+        }
+
+        /* ---- names & headings ---- */
+        .hosts {
+            max-width: 30em
+        }
+
+        .names {
+            font: 400 clamp(3.2rem, 7.5vw, 5.4rem)/1.12 var(--script);
+            color: var(--vermilion)
+        }
+
+        .names .amp {
+            font: 400 .5em/1.5 var(--script);
+            color: var(--leaf)
+        }
+
+        .section h2 em {
+            font-size: .92em;
+            color: var(--vermilion)
+        }
+
+        .closing .script {
+            font-size: clamp(2.4rem, 7vw, 4.4rem);
+            line-height: 1.2;
+            color: var(--vermilion)
+        }
+
+        .event h3,
+        .venue-card h3 {
+            font-family: var(--script);
+            font-weight: 400;
+            color: var(--maroon)
+        }
+
+        /* ---- gate ---- */
+        .door {
+            background: var(--paper)
+        }
+
+        .door.left,
+        .door.right {
+            box-shadow: none
+        }
+
+        .door::before {
+            border: 3px solid var(--line);
+            box-shadow: inset 0 0 0 8px var(--vermilion), inset 0 0 0 10px var(--line), inset 0 0 0 18px var(--turmeric), inset 0 0 0 20px var(--line)
+        }
+
+        .door-mandala {
+            opacity: .5
+        }
+
+        .gate-content {
+            width: min(calc(100% - 32px), 500px);
+            padding: 44px 22px 30px;
+            background: var(--ivory);
+            border-radius: 999px 999px 18px 18px;
+            box-shadow: 0 0 0 2px var(--line), 0 0 0 9px var(--leaf), 0 0 0 11px var(--line), 0 30px 50px -20px #00000055
+        }
+
+        .gate h1 {
+            font: 400 clamp(2.3rem, 9vw, 3.6rem)/1.15 var(--script);
+            color: var(--vermilion)
+        }
+
+        .gate h1 .amp {
+            font: 400 .55em/1.3 var(--script);
+            color: var(--leaf)
+        }
+
+        .seal {
+            font-size: 1.7rem;
+            color: var(--ivory);
+            background: var(--vermilion);
+            box-shadow: 0 0 0 3px var(--line), 0 0 0 9px var(--turmeric), 0 0 0 11px var(--line), 0 14px 24px #7a171255
+        }
+
+        .seal::before {
+            border: 2px dotted var(--ivory)
+        }
+
+        .seal::after {
+            inset: -16px;
+            border: 2px solid var(--vermilion)
+        }
+
+        .gate .hint {
+            font-weight: 500
+        }
+
+        /* ---- petals become marigold and rose flakes ---- */
+        .petal {
+            background: var(--c);
+            opacity: .85
+        }
+
+        /* ---- hero portrait in a painted arch ---- */
+        .portrait-frame {
+            background: var(--vermilion);
+            box-shadow: 0 0 0 2px var(--line), 0 0 0 9px var(--turmeric), 0 0 0 11px var(--line), 0 30px 50px -24px #7a171277
+        }
+
+        .portrait-frame::after {
+            border: 2px dotted var(--ivory)
+        }
+
+        .portrait img {
+            box-shadow: 0 0 0 2px var(--line)
+        }
+
+        .portrait .halo {
+            opacity: .5
+        }
+
+        /* ---- save the date ---- */
+        .date-section {
+            background: linear-gradient(180deg, transparent, #f0d59c66 18%, #f0d59c66 82%, transparent)
+        }
+
+        .medallion .ring {
+            opacity: .9
+        }
+
+        .scratch-face {
+            background: var(--ivory);
+            box-shadow: 0 0 0 3px var(--line), 0 0 0 10px var(--turmeric), 0 0 0 12px var(--line), 0 0 0 18px var(--vermilion), 0 0 0 20px var(--line)
+        }
+
+        .scratch-face strong {
+            font-family: var(--script);
+            font-weight: 400;
+            color: var(--vermilion)
+        }
+
+        .scratch-face span {
+            font-weight: 500;
+            color: var(--leaf)
+        }
+
+        .countdown li {
+            background: var(--ivory);
+            border: 2px solid var(--line);
+            box-shadow: inset 0 0 0 4px var(--ivory), inset 0 0 0 7px var(--tint, var(--vermilion)), inset 0 0 0 9px var(--line)
+        }
+
+        .countdown li:nth-child(1) { --tint: var(--vermilion) }
+        .countdown li:nth-child(2) { --tint: var(--turmeric) }
+        .countdown li:nth-child(3) { --tint: var(--leaf) }
+        .countdown li:nth-child(4) { --tint: var(--pink) }
+
+        .countdown strong {
+            font-family: var(--script);
+            font-weight: 400;
+            color: var(--maroon)
+        }
+
+        .countdown span {
+            font-weight: 500
+        }
+
+        /* ---- events ---- */
+        .events::before {
+            border-top: 2px dashed var(--line)
+        }
+
+        .event {
+            background: var(--ivory);
+            box-shadow: 0 0 0 2px var(--line), 0 0 0 9px var(--tint), 0 0 0 11px var(--line), 0 24px 36px -24px #7a171266
+        }
+
+        .event:hover {
+            box-shadow: 0 0 0 2px var(--line), 0 0 0 9px var(--tint), 0 0 0 11px var(--line), 0 34px 44px -24px #7a171288
+        }
+
+        .event::after {
+            border: 2px dotted var(--line)
+        }
+
+        .event:nth-child(1) {
+            --tint: var(--vermilion);
+            --tint-ink: var(--berry);
+            --badge-ink: var(--ivory)
+        }
+
+        .event:nth-child(2) {
+            --tint: var(--turmeric);
+            --tint-ink: #8a4f00;
+            --badge-ink: var(--line)
+        }
+
+        .event:nth-child(3) {
+            --tint: var(--leaf);
+            --tint-ink: #24622d;
+            --badge-ink: var(--ivory)
+        }
+
+        .event-badge {
+            background: var(--tint);
+            color: var(--badge-ink);
+            box-shadow: 0 0 0 2px var(--line), 0 0 0 8px var(--ivory), 0 0 0 10px var(--line)
+        }
+
+        .event-badge::before {
+            content: '';
+            position: absolute;
+            inset: 6px;
+            border-radius: 50%;
+            border: 2px dotted currentColor
+        }
+
+        .event-badge svg {
+            width: 40px;
+            height: 26px
+        }
+
+        .event-badge strong {
+            font-family: var(--script);
+            font-weight: 400
+        }
+
+        .event-badge span {
+            font-weight: 500
+        }
+
+        .event .day {
+            font-weight: 500
+        }
+
+        .event .map-link {
+            text-decoration-color: var(--vermilion)
+        }
+
+        /* ---- venue ---- */
+        .venue-card {
+            background: var(--ivory);
+            border: 0;
+            box-shadow: 0 0 0 2px var(--line), 0 0 0 10px var(--vermilion), 0 0 0 12px var(--line), 0 30px 50px -30px #7a171277
+        }
+
+        .venue-card::before {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            border: 2px dotted var(--line);
+            pointer-events: none
+        }
+
+        .corner {
+            color: var(--leaf)
+        }
+
+        .venue-card .pin {
+            color: var(--vermilion)
+        }
+
+        .pill {
+            border: 2px solid var(--line);
+            background: var(--turmeric);
+            color: var(--line);
+            font-weight: 500;
+            box-shadow: 3px 3px 0 var(--line)
+        }
+
+        /* ---- closing ---- */
+        .closing {
+            background: radial-gradient(ellipse 70% 80% at 50% 50%, #f3d79f, #f3dcaa 40%, transparent 75%)
+        }
+
+        .closing .big-mandala {
+            opacity: .08
+        }
+
+        .closing .sign {
+            font-weight: 600;
+            color: var(--maroon)
+        }
+
+        /* ---- music button ---- */
+        .music {
+            border: 2px solid var(--line);
+            background: var(--ivory)
+        }
+
+        .music-disc {
+            background: var(--vermilion);
+            box-shadow: inset 0 0 0 3px var(--turmeric)
+        }
+
+        @media (max-width: 860px) {
+            .hero {
+                gap: 110px
+            }
+
+            .events {
+                gap: 44px
+            }
+        }
+
+        @media (max-width: 560px) {
+            .divider svg {
+                width: 120px;
+                height: 24px
+            }
+
+            .countdown span {
+                font-size: .54rem;
+                letter-spacing: .08em
+            }
+
+            .gate-content {
+                padding: 34px 16px 24px
+            }
+        }
     </style>
     <noscript>
         <style>
@@ -1283,10 +1698,47 @@
     <!-- Reusable ornaments. The mandala's petal rings are generated in the script below. -->
     <svg width="0" height="0" style="position:absolute" aria-hidden="true">
         <defs>
-            <symbol id="lotus" viewBox="0 0 64 40" class="lotus">
-                <path class="soft" d="M32 37C20 38 8 32 2 24c12-2 24 4 30 13zM32 37c12 1 24-5 30-13-12-2-24 4-30 13z" />
-                <path class="soft" d="M32 36C22 32 14 22 12 12c10 2 18 10 20 24zM32 36c10-4 18-14 20-24-10 2-18 10-20 24z" />
-                <path d="M32 4c8 10 8 22 0 32-8-10-8-22 0-32z" />
+            <!-- Mithila-style lotus: flat fills, black outline, painted veins. -->
+            <symbol id="lotus" viewBox="0 0 64 40">
+                <g stroke="#1d140f" stroke-width="1.4" stroke-linejoin="round">
+                    <path d="M32 37C20 38 8 32 2 24c12-2 24 4 30 13zM32 37c12 1 24-5 30-13-12-2-24 4-30 13z" fill="#d6457a" />
+                    <path d="M32 36C22 32 14 22 12 12c10 2 18 10 20 24zM32 36c10-4 18-14 20-24-10 2-18 10-20 24z" fill="#c8291f" />
+                    <path d="M32 4c8 10 8 22 0 32-8-10-8-22 0-32z" fill="#f0ae2e" />
+                    <path d="M32 10v22M20 22l8 10M44 22l-8 10" fill="none" stroke-width="1" />
+                    <path d="M24 37h16c0 2-4 3-8 3s-8-1-8-3z" fill="#2f7d3a" />
+                </g>
+            </symbol>
+            <!-- Mithila fish (a wedding symbol of fertility and good fortune), facing right. -->
+            <clipPath id="fishBodyClip">
+                <path d="M20 26C38 4 82 2 112 26C82 50 38 48 20 26Z" />
+            </clipPath>
+            <symbol id="fish" viewBox="0 0 120 52">
+                <g stroke="#1d140f" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round">
+                    <path d="M58 9Q66-1 78 7Z" fill="#2f7d3a" />
+                    <path d="M58 43Q66 53 78 45Z" fill="#2f7d3a" />
+                    <path d="M24 26L4 7Q11 26 4 45Z" fill="#c8291f" />
+                    <path d="M8 14l9 10M8 38l9-10" fill="none" stroke-width="1" />
+                    <path d="M20 26C38 4 82 2 112 26C82 50 38 48 20 26Z" fill="#f0ae2e" />
+                    <g clip-path="url(#fishBodyClip)">
+                        <path d="M44 0Q51 26 44 52H58Q65 26 58 0Z" fill="#c8291f" />
+                        <path d="M66 0Q73 26 66 52H74Q81 26 74 0Z" fill="#2f7d3a" />
+                        <path d="M28 20l6 6-6 6M34 18l7 8-7 8" fill="none" stroke-width="1.1" />
+                        <path d="M48 12v28M53 10v32" fill="none" stroke="#fcf3dc" stroke-width="1" />
+                    </g>
+                    <path d="M20 26C38 4 82 2 112 26C82 50 38 48 20 26Z" fill="none" />
+                    <path d="M89 11Q80 26 89 41" fill="none" />
+                    <circle cx="99" cy="22" r="4.6" fill="#fcf3dc" />
+                    <circle cx="99.6" cy="22" r="2" fill="#1d140f" stroke="none" />
+                    <path d="M111 27l-5 1" fill="none" />
+                </g>
+            </symbol>
+            <symbol id="fishPair" viewBox="0 0 260 52">
+                <use href="#fish" x="0" y="0" width="120" height="52" />
+                <use href="#fish" width="120" height="52" transform="translate(260 0) scale(-1 1)" />
+                <use href="#lotus" x="110" y="6" width="40" height="28" />
+                <circle cx="130" cy="42" r="2.4" fill="#1d140f" />
+                <circle cx="122" cy="44" r="1.6" fill="#c8291f" />
+                <circle cx="138" cy="44" r="1.6" fill="#c8291f" />
             </symbol>
             <symbol id="flourish" viewBox="0 0 100 100">
                 <g class="ornament" stroke-width="1.2">
@@ -1357,7 +1809,7 @@
                 </h2>
                 <p class="invite-line">Your gracious presence and blessings will make our celebration more joyous and memorable.</p>
                 <div class="divider" aria-hidden="true"><svg>
-                        <use href="#lotus" />
+                        <use href="#fishPair" />
                     </svg></div>
                 <p class="venue-soon">Celebrations at our home</p>
             </div>
@@ -1377,7 +1829,7 @@
                 <span class="kicker reveal">Save the date</span>
                 <h2 class="reveal">A day close to <em>our hearts</em></h2>
                 <div class="divider reveal" aria-hidden="true"><svg>
-                        <use href="#lotus" />
+                        <use href="#fishPair" />
                     </svg></div>
                 <div class="medallion reveal">
                     <svg class="ring" aria-hidden="true">
@@ -1402,7 +1854,7 @@
                 <span class="kicker reveal">Our celebrations</span>
                 <h2 class="reveal">Three days of <em>joy</em>,<br>forever to <em>cherish</em></h2>
                 <div class="divider reveal" aria-hidden="true"><svg>
-                        <use href="#lotus" />
+                        <use href="#fishPair" />
                     </svg></div>
                 <p class="lede reveal">All celebrations are at our home. Tap any event for directions.</p>
                 <ol class="events">
@@ -1479,7 +1931,7 @@
                 <span class="kicker reveal">We hope to see you there</span>
                 <p class="script reveal">Your presence is our blessing</p>
                 <div class="divider reveal" aria-hidden="true"><svg>
-                        <use href="#lotus" />
+                        <use href="#fishPair" />
                     </svg></div>
                 <p class="lede reveal">We look forward to your kind presence and blessings.</p>
                 <p class="sign-label reveal">With warm regards</p>
@@ -1498,18 +1950,21 @@
             const ring = (count, radius, d, extra = '') => Array.from({ length: count }, (_, i) =>
                 `<path d="${d}" ${extra} transform="rotate(${(360 / count) * i}) translate(0 ${-radius})"/>`).join('');
             const petal = (w, h) => `M0 0C${w} ${-h * .3} ${w} ${-h * .7} 0 ${-h}C${-w} ${-h * .7} ${-w} ${-h * .3} 0 0Z`;
+            // Painted like a Mithila sun-lotus: flat colour fills with black outlines and line hatching.
+            const ink = 'stroke="#1d140f" stroke-width="1.4" stroke-linejoin="round"';
+            const turn = (deg, svg) => `<g transform="rotate(${deg})">${svg}</g>`;
             document.getElementById('mandalaRings').innerHTML = [
-                '<circle r="97" stroke-dasharray="0 6" stroke-width="2.4"/>',
-                '<circle r="92"/>',
-                ring(32, 66, petal(6, 24)),
-                ring(32, 70, petal(3, 14), 'fill="currentColor" fill-opacity=".18"'),
-                '<circle r="64"/>',
-                '<circle r="58" stroke-dasharray="0 5" stroke-width="2"/>',
-                ring(16, 30, petal(9, 26)),
-                ring(16, 30, petal(4, 16), 'fill="currentColor" fill-opacity=".25"'),
-                '<circle r="28"/>',
-                ring(8, 4, petal(6, 20), 'fill="currentColor" fill-opacity=".2"'),
-                '<circle r="5" fill="currentColor"/>'
+                '<circle r="97" stroke="#1d140f" stroke-dasharray="0 7" stroke-width="3.2"/>',
+                '<circle r="91" stroke="#1d140f" stroke-width="1.6"/>',
+                turn(7.5, ring(24, 60, petal(5, 22), `fill="#f0ae2e" ${ink}`)),
+                ring(24, 60, petal(9, 29), `fill="#c8291f" ${ink}`),
+                '<circle r="61" fill="#fcf3dc" stroke="#1d140f" stroke-width="1.8"/>',
+                ring(60, 42, 'M0 0V-17', 'stroke="#1d140f" stroke-width=".9"'),
+                '<circle r="42" fill="#2f7d3a" stroke="#1d140f" stroke-width="1.8"/>',
+                '<circle r="37" stroke="#fcf3dc" stroke-dasharray="0 5" stroke-width="2.2"/>',
+                ring(8, 4, petal(9, 30), `fill="#d6457a" ${ink}`),
+                '<circle r="9" fill="#f0ae2e" stroke="#1d140f" stroke-width="1.6"/>',
+                '<circle r="3.5" fill="#1d140f"/>'
             ].join('');
         })();
 
@@ -1593,7 +2048,7 @@
 
         // ---- Petals drifting over the whole site.
         if (!reduceMotion) {
-            const colours = ['#efb3a8', '#e9a2a0', '#f1c7a6', '#e7b9c0', '#dcc196'];
+            const colours = ['#f0ae2e', '#e8731c', '#c8291f', '#f5c84c', '#d6457a'];
             const box = document.getElementById('petals');
             const count = innerWidth < 600 ? 10 : 16;
             for (let i = 0; i < count; i++) {
@@ -1651,9 +2106,9 @@
                 canvas.height = size * ratio;
                 ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
                 const g = ctx.createRadialGradient(size * .35, size * .3, 10, size / 2, size / 2, size * .6);
-                g.addColorStop(0, '#f7e6c4');
-                g.addColorStop(.45, '#dcc196');
-                g.addColorStop(1, '#b8925a');
+                g.addColorStop(0, '#f8d978');
+                g.addColorStop(.5, '#f0ae2e');
+                g.addColorStop(1, '#e07a1c');
                 ctx.fillStyle = g;
                 ctx.fillRect(0, 0, size, size);
                 ctx.fillStyle = '#fff8ea';
@@ -1664,16 +2119,19 @@
                     ctx.fill();
                 }
                 ctx.globalAlpha = 1;
-                ctx.strokeStyle = '#fff6e599';
-                ctx.lineWidth = 1;
+                ctx.strokeStyle = '#1d140f';
+                ctx.lineWidth = 2;
+                ctx.setLineDash([0, 7]);
+                ctx.lineCap = 'round';
                 ctx.beginPath();
                 ctx.arc(size / 2, size / 2, size / 2 - 14, 0, Math.PI * 2);
                 ctx.stroke();
-                ctx.fillStyle = '#6e2a3a';
+                ctx.setLineDash([]);
+                ctx.fillStyle = '#7a1712';
                 ctx.textAlign = 'center';
-                ctx.font = `400 ${size * .17}px "Pinyon Script", cursive`;
+                ctx.font = `400 ${size * .15}px "Yatra One", serif`;
                 ctx.fillText('Scratch', size / 2, size / 2);
-                ctx.font = `400 ${size * .05}px Jost, sans-serif`;
+                ctx.font = `500 ${size * .05}px Jost, sans-serif`;
                 ctx.fillText('T O   R E V E A L', size / 2, size / 2 + size * .13);
                 ctx.globalCompositeOperation = 'destination-out';
                 ctx.lineCap = 'round';
