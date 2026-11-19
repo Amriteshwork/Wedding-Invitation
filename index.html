@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#f6e6da">
     <meta name="color-scheme" content="light">
     <title>Amritesh &amp; Shalini · Wedding Invitation</title>
-    <meta name="description" content="Celebrate the wedding of Amritesh and Shalini.">
+    <meta name="description" content="Shri Arunabh Nanan &amp; Smt. Abha Kumari invite you to the wedding of their son Amritesh with Shalini.">
     <link rel="icon" type="image/svg+xml"
         href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='32' fill='%23f6e6da'/%3E%3Cpath d='M32 12c7 9 7 20 0 30-7-10-7-21 0-30zM32 42c-9-3-15-10-17-19 9 1 15 8 17 19zM32 42c9-3 15-10 17-19-9 1-15 8-17 19z' fill='%23c9786f'/%3E%3Cpath d='M14 48h36' stroke='%23b8925a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -543,8 +543,26 @@
             color: var(--gold)
         }
 
+        .blessing-line {
+            margin: 22px auto 0;
+            max-width: 25em;
+            font: 500 1.25rem/1.5 var(--serif);
+            color: var(--berry)
+        }
+
+        .names .parentage {
+            display: block;
+            margin: 2px 0 8px;
+            font: italic 400 1.05rem/1.5 var(--serif);
+            color: var(--muted)
+        }
+
+        .parentage i {
+            white-space: nowrap
+        }
+
         .invite-line {
-            margin: 18px auto 0;
+            margin: 14px auto 0;
             max-width: 26em;
             font: italic 400 1.3rem/1.55 var(--serif);
             color: var(--muted)
@@ -997,8 +1015,22 @@
             color: var(--maroon)
         }
 
+        .closing .sign-label {
+            margin: 22px 0 0;
+            font: 400 .74rem/1.4 var(--sans);
+            letter-spacing: .32em;
+            text-transform: uppercase;
+            color: var(--gold)
+        }
+
+        .closing .sign-also {
+            margin: 10px 0 0;
+            font: italic 1.1rem var(--serif);
+            color: var(--muted)
+        }
+
         .closing .sign {
-            margin: 18px 0 0;
+            margin: 8px 0 0;
             font: 500 1.4rem var(--serif);
             color: var(--berry)
         }
@@ -1275,7 +1307,7 @@
             <p class="mantra" lang="hi">॥ श्री गणेशाय नमः ॥</p>
             <span class="eyebrow" style="margin-top:14px">The wedding of</span>
             <h1 id="gateTitle">Amritesh <span class="amp">&amp;</span> Shalini</h1>
-            <p class="sub">A little invitation, sealed with love</p>
+            <p class="sub">An invitation from our family, sealed with love</p>
             <button class="seal" id="openInvite" type="button" aria-label="Open the invitation">A<small>&amp;</small>S</button>
             <span class="hint">Tap the seal to open</span>
         </div>
@@ -1299,9 +1331,13 @@
             <div class="hero-copy reveal">
                 <img class="ganpati" src="ganpati.png" alt="" width="1293" height="1217">
                 <p class="mantra" lang="hi">॥ श्री गणेशाय नमः ॥</p>
-                <span class="eyebrow" style="margin-top:22px">Together with our families</span>
-                <h2 class="names"><span>Amritesh</span><span class="amp">&amp;</span><span>Shalini</span></h2>
-                <p class="invite-line">joyfully invite you to bless and celebrate the beginning of our forever</p>
+                <p class="blessing-line">With the blessings of Almighty God and our beloved families, we cordially invite you to the auspicious wedding ceremony of</p>
+                <h2 class="names">
+                    <span>Amritesh<small class="parentage">son of <i>Shri Arunabh Nanan</i> &amp; <i>Smt. Abha Kumari</i></small></span>
+                    <span class="amp">&amp;</span>
+                    <span>Shalini<small class="parentage">daughter of <i>Shri Subodh Singh</i> &amp; <i>Smt. Neetu Singh</i></small></span>
+                </h2>
+                <p class="invite-line">Your gracious presence and blessings will make our celebration more joyous and memorable.</p>
                 <div class="divider" aria-hidden="true"><svg>
                         <use href="#lotus" />
                     </svg></div>
@@ -1427,8 +1463,10 @@
                 <div class="divider reveal" aria-hidden="true"><svg>
                         <use href="#lotus" />
                     </svg></div>
-                <p class="lede reveal">We look forward to celebrating this new chapter with the people we love most.</p>
-                <p class="sign reveal">With love, Amritesh &amp; Shalini</p>
+                <p class="lede reveal">We look forward to your kind presence and blessings.</p>
+                <p class="sign-label reveal">With warm regards</p>
+                <p class="sign reveal">Arunabh Nanan, Abha Kumari &amp; Anjali Rani</p>
+                <!-- <p class="sign-also reveal">Eagerly awaiting your presence · Anjali Rani</p> -->
             </div>
         </section>
     </main>
