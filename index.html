@@ -1045,6 +1045,28 @@
             color: var(--muted)
         }
 
+        .closing .awaiting {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            justify-content: center;
+            gap: 2px 32px;
+            margin: 8px auto 0;
+            padding: 0;
+            list-style: none;
+            font: 500 1.2rem/1.5 var(--serif);
+            color: var(--berry)
+        }
+
+        .closing .awaiting li {
+            white-space: nowrap
+        }
+
+        @media (max-width: 480px) {
+            .closing .awaiting {
+                grid-template-columns: auto
+            }
+        }
+
         .closing .sign {
             margin: 8px 0 0;
             font: 500 1.4rem var(--serif);
@@ -1799,13 +1821,11 @@
             <div class="hero-copy reveal">
                 <img class="ganpati" src="ganpati.png" alt="" width="1293" height="1217">
                 <p class="mantra" lang="hi">॥ श्री गणेशाय नमः ॥</p>
-                <p class="blessing-line">With the blessings of Almighty God and our beloved families,</p>
-                <p class="hosts"><i>Shri Arunabh Nandan</i>, <i>Smt. Abha Kumari</i> &amp; <i>Anjali Rani</i></p>
-                <p class="blessing-line tight">cordially invite you to the auspicious wedding ceremony of</p>
+                <p class="blessing-line">With the blessings of Almighty God, we cordially invite you to the auspicious wedding ceremony of</p>
                 <h2 class="names">
-                    <span>Amritesh</span>
+                    <span>Amritesh<small class="parentage">son of <i>Smt. Abha Kumari</i> &amp; <i>Shri Arunabh Nandan</i><br>and brother of <i>Anjali Rani</i></small></span>
                     <span class="amp">&amp;</span>
-                    <span>Shalini<small class="parentage">daughter of <i>Shri Subodh Singh</i> &amp; <i>Smt. Neetu Singh</i></small></span>
+                    <span>Shalini<small class="parentage">daughter of <i>Smt. Neetu Singh</i> &amp; <i>Shri Subodh Singh</i></small></span>
                 </h2>
                 <p class="invite-line">Your gracious presence and blessings will make our celebration more joyous and memorable.</p>
                 <div class="divider" aria-hidden="true"><svg>
@@ -1934,9 +1954,17 @@
                         <use href="#fishPair" />
                     </svg></div>
                 <p class="lede reveal">We look forward to your kind presence and blessings.</p>
+                <p class="sign-label reveal">With the blessings of</p>
+                <p class="sign reveal">Shri Birchandra Tiwari</p>
                 <p class="sign-label reveal">With warm regards</p>
                 <p class="sign reveal">Arunabh Nandan, Abha Kumari &amp; Anjali Rani</p>
-                <!-- <p class="sign-also reveal">Eagerly awaiting your presence · Anjali Rani</p> -->
+                <p class="sign-label reveal">Eagerly awaiting your presence</p>
+                <ul class="awaiting reveal">
+                    <li>Shri Amitabh Nandan</li>
+                    <li>Shri Amlabh Nandan</li>
+                    <li>Shri Abhishek Nandan</li>
+                    <li>Shri Aditya Nandan</li>
+                </ul>
             </div>
         </section>
     </main>
